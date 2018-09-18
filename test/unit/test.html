@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    html,
+    body {
+      padding: 0;
+      margin: 0;
+    }
+  </style>
+  <script>
+    function BB() {
+      document.getElementById('aa').addEventListener('mousemove', function (e) {
+        console.log(e)
+        e.target.innerHTML = `
+        -------------Dom-----------------
+        clientHeight: ${e.target.clientHeight} <br/>
+        clientLeft: ${e.target.clientLeft} <br/>
+        clientTop: ${e.target.clientTop} <br/>
+        clientWidth: ${e.target.clientWidth} <br/>
+        offsetHeight: ${e.target.offsetHeight} <br/>
+        offsetLeft: ${e.target.offsetLeft} <br/>
+        offsetTop: ${e.target.offsetTop} <br/>
+        offsetWidth: ${e.target.offsetWidth} <br/>
+        scrollHeight: ${e.target.scrollHeight} <br/>
+        scrollLeft: ${e.target.scrollLeft} <br/>
+        scrollTop: ${e.target.scrollTop} <br/>
+        scrollWidth: ${e.target.scrollWidth} <br/>
+        --------------------------------
+        -------------Event--------------<br/>
+        clientX:${e.clientX} <br/>
+        clientY:${e.clientY}<br/>
+        layerX:${e.layerX}<br/>
+        layerY:${e.layerY}<br/>
+        movementX: ${e.movementX}<br/>
+        movementY: ${e.movementY}<br/>
+        offsetX:${e.offsetX}<br/>
+        offsetY:${e.offsetY}<br/>
+        pageX:${e.pageX}<br/>
+        pageY:${e.pageY}<br/>
+        screenX:${e.screenX}<br/>
+        screenY:${e.screenY}<br/>
+        x:${e.x}<br/>
+        y:${e.y}<br/>
+        --------------------------------
+        `
+      })
+    }
+  </script>
+</head>
+
+<body onload="BB()">
+  <div style="margin-top:10px;">
+    <div id="aa" style="width:800px;height:800px;border: 1px solid red;cursor:pointer;padding: 10px;"></div>
+  </div>
+
+</body>
+
+</html>
